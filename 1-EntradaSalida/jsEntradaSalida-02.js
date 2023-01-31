@@ -6,7 +6,7 @@ function mostrar()
 	//alert("ok"); se le asigna un valor a "let" y luego se expone con "alert"
 	// var edad; (no se utiliza, es preferible "let")
 	let nombre;
-	let nombreCompleto // Notacion Lower Camel Case, para leer mejor cuando son dos palabras
+	//let nombreCompleto // Notacion Lower Camel Case, para leer mejor cuando son dos palabras
 	/* siempre asignar un nombre que se corresponda con su contenido, para que recordemos que guardamos
 	";" indica el fin de una linea, en JS se necesita obligatoriamente
 	*/
