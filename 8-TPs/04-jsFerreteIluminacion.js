@@ -18,88 +18,76 @@ function CalcularPrecio ()
 {   
     let cantidad;
     let precio;
+    let descuento;
     let precioFinal;
     let marca;
-    let ingresosBrutos;
     let impuesto;
+    let precioConImpuesto;
 
-    cantidad = document.getElementById ("txtIdCantidad").value;
-    cantidad = parseInt(cantidad);
+    // txtIdCantidad ; Marca  ; txtIdprecioDescuento
+
+    cantidad= document.getElementById("txtIdCantidad").value;
+    cantidad = parseInt (cantidad);
 
     precio = cantidad * 35;
+    marca = document.getElementById("Marca").value;
 
-    marca = document.getElementById ("Marca").value;
-
-    if (cantidad >= 6) {
-
-        precioFinal = precio * 0.5;
-
+    if (cantidad >=6) {
+        descuento= 0.5;
     }
     else {
-
-        if (cantidad == 5 && marca == "ArgentinaLuz"){
-
-            precioFinal = precio * 0.6;
-
-        }
-        else {
-
-            if (cantidad == 5 && marca != "ArgentinaLuz") {
-
-                precioFinal = precio * 0.7;
-
-            }
-            else {
-
-                if (cantidad == 4 && (marca == "ArgentinaLuz" || marca== "FelipeLamparas")) {
-
-                    precioFinal = precio * 0.75;
-
+        switch (cantidad) {
+            case 5:
+                switch (marca) {
+                    case "ArgentinaLuz":
+                        descuento = 0.6;
+                        break;
+                
+                    default:
+                        descuento = 0.7;
+                        break;
                 }
-                else {
+                break;
+            case 4:
+                switch (marca) {
+                    case "ArgentinaLuz":
+                    case "FelipeLamparas":
+                        descuento= 0.75;
+                        break;
 
-                    if (cantidad == 4 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas")){
-
-                        precioFinal = precio * 0.8;
-
-                    }
-                    else {
-
-                        if (cantidad == 3 && marca == "ArgentinaLuz") {
-
-                            precioFinal = precio * 0.85;
-
-                        }
-                        else {
-                            if (cantidad == 3 && marca == "FelipeLamparas"){
-
-                                precioFinal= precio * 0.9;
-
-                            }
-                            else {
-
-                                precioFinal= precio;
-
-                            }
-                        }
-                        
-                    }
+                    default:
+                        descuento = 0.8;
                 }
-            }
-        }
+                break;
+            case 3: 
+                switch (marca) {
+                    case "ArgentinaLuz":
+                        descuento = 0.85;
+                        break;
 
+                    case "FelipeLamparas":
+                        descuento= 0.9;
+                        break;
+                    default:
+                        descuento = 0.95;
+                }
+                break;
+            default:
+                descuento = 1;
+        }
     }
+ 
+    precioFinal = precio * descuento;
 
-    document.getElementById("txtIdprecioDescuento").value = precioFinal;
-
-    if (precioFinal >= 120) {
-
+    if (precioFinal >= 120){
         impuesto = precioFinal * 0.1;
-        ingresosBrutos = precioFinal + impuesto;
+        precioConImpuesto = precioFinal + impuesto;
+        document.getElementById("txtIdprecioDescuento").value = precioConImpuesto;
 
-        alert ("IIBB Usted pagó " + ingresosBrutos + ", siendo " + impuesto + " el impuesto que se pagó");
-
+        alert ("IIBB Usted pago " + precioConImpuesto + ", siendo " + impuesto + " el impuesto que se pagó.")
+    }
+    else {
+    document.getElementById("txtIdprecioDescuento").value = precioFinal;
     }
 
- 	
 }

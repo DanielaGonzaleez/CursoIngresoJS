@@ -31,7 +31,7 @@ function Promedio ()
 
     precio1 = document.getElementById ("txtIdPrecioUno").value;
     precio2 = document.getElementById("txtIdPrecioDos").value;
-    precio2 = document.getElementById("txtIdPrecioTres").value;
+    precio3 = document.getElementById("txtIdPrecioTres").value;
 
     precio1 = parseInt (precio1);
     precio2 = parseInt (precio2);
