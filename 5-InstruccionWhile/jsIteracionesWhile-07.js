@@ -4,9 +4,9 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var respuesta;
+	let contador;
+	let acumulador;
+	let respuesta;
 	let numeroIngresado;
 
 	contador=0;
@@ -16,14 +16,20 @@ function mostrar()
 	while (respuesta == "si") {
 		numeroIngresado = prompt ("ingrese un numero");
 		numeroIngresado = parseInt (numeroIngresado);
+
+			while (isNaN(numeroIngresado)) {
+				numeroIngresado = prompt ("Error!! Ingrese un numero");
+				numeroIngresado = parseInt (numeroIngresado);
+			}
+
 		acumulador = acumulador + numeroIngresado;
 
-		respuesta = prompt ("¿Desea ingresar otro numero");
+		respuesta = prompt ("¿Desea ingresar otro numero?");
 		contador = contador + 1
 	}
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	document.getElementById ("txtIdSuma").value =acumulador;
+	document.getElementById ("txtIdPromedio").value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN

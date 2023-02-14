@@ -6,7 +6,7 @@ function mostrar()
 	var numeroIngresado;
 	numeroIngresado = prompt("ingrese un número entre 0 y 9.");
 
-	while (numeroIngresado <0 && numeroIngresado >9) {
+	while (numeroIngresado <0 || numeroIngresado > 9) {
 		alert ("El numero ingresado no es válido");
 		numeroIngresado= prompt("ingrese un número entre 0 y 9.");
 	}
