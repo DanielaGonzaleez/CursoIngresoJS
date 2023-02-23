@@ -6,29 +6,33 @@ si es Julio: "se vienen las vacaciones!!!."
 si es Diciembre: "Felices fiesta!!!."
 */
 function mostrar()
-{
-	//tomo el mes
-	let mesDelAño;
+{	//txtIdMes
+
+	let mesIngresado;
 	let mensaje;
 
-	mesDelAño =document.getElementById ("txtIdMes").value;
-	
-	switch (mesDelAño) {
+	mesIngresado = document.getElementById ("txtIdMes").value;
+
+	switch (mesIngresado) {
 		case "Enero":
-			mensaje = "Que comiences bien el año!!!";
+			mensaje = "Que comiences bien el año!!!.";
 			break;
-	
+		
 		case "Marzo":
-			mensaje= "A clases!!!";
+			mensaje = "A clases!!!.";
 			break;
 
 		case "Julio":
-			mensaje ="Se vienen las vacaciones!!!";
+			mensaje = "Se vienen las vacaciones!!!.";
 			break;
 		
 		case "Diciembre":
-			mensaje = "Felices fiestas!!!";
+			mensaje = "Felices fiestas!!!.";
 			break;
+
+		default :
+			mensaje = "No hay un mensaje para este mes, aguarde.";
+
 	}
 
 	alert (mensaje);

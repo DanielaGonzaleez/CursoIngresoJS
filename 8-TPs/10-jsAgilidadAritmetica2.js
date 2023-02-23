@@ -3,6 +3,8 @@ se agregara un temporizador que
  a los cinco segundos dará por terminado 
  el juego  de no ser ingresado el resultado 
  correcto en ese lapso de tiempo. */
+
+ //NO lo puedo hacer con mis conocimientos
 var respuesta;
 var temporizador;
 function comenzar()

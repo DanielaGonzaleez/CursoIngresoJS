@@ -3,18 +3,19 @@ Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
-{//txtIdNumeroUno (caja 1); txtIdNumeroDos (caja 2)
-    let numeroUno;
-    let numeroDos;
-    let resultado;
+{   // txtIdNumeroUno ; txtIdNumeroDos
+    let numero1;
+    let numero2;
+    let suma;
 
-    numeroUno = document.getElementById("txtIdNumeroUno").value;
-    numeroDos = document.getElementById ("txtIdNumeroDos").value;
+    numero1 = document.getElementById ("txtIdNumeroUno").value;
+    numero2 = document.getElementById ("txtIdNumeroDos").value;
 
-    numeroUno = parseInt (numeroUno);
-    numeroDos = parseInt (numeroDos);
-    resultado = numeroUno + numeroDos;
+    numero1 = parseInt (numero1);
+    numero2 = parseInt (numero2);
 
-    alert ("La suma es: " + resultado );
+    suma = numero1 + numero2;
+
+    alert ("La suma es " + suma);
 }
 

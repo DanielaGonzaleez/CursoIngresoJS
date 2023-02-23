@@ -4,6 +4,8 @@ mostrara el texto de un color entre los 6 posibles
  para que el jugador sepa que botón tocar .Al tocar 
  el botón correcto se informara cuanto tiempo tardo.
 */
+
+//NO lo puedo hacer con mis conocimientos
 var ColorSecreto;
 var tiempoInicio;
 function comenzar()

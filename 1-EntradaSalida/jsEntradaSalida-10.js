@@ -4,16 +4,17 @@ Transformarlo a entero (parseInt), luego
 mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
-{//txtIdImporte  ;  txtIdResultado
+{   //txtIdImporte ; txtIdResultado
     let importe;
-    let descuento;
-    let nuevoImporte;
+    let porcentaje;
+    let resultado;
 
     importe = document.getElementById ("txtIdImporte").value;
     importe = parseInt (importe);
 
-    descuento = importe / 100 * 25;
-    nuevoImporte = importe - descuento;
+    porcentaje = importe * 0.25;
 
-    document.getElementById ("txtIdResultado").value = nuevoImporte;
+    resultado = importe - porcentaje;
+
+    document.getElementById ("txtIdResultado").value = resultado;
 }
