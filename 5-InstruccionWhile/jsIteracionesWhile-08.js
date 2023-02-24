@@ -19,7 +19,7 @@ function mostrar()
 			numeroIngresado = prompt ("Por favor, ingrese un número");
 			numeroIngresado = parseInt (numeroIngresado);
 		}while (isNaN(numeroIngresado));
-
+	
 		if (numeroIngresado >= 0){
 			sumaPositivos = sumaPositivos + numeroIngresado;
 		}

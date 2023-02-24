@@ -11,10 +11,12 @@ function mostrar()
 		numeroIngresado = prompt ("ingrese un número");
 		numeroIngresado = parseInt (numeroIngresado);
 		
+		// isNan: por si pone una palabra en vez de un numero, que da NaN
 		while (isNaN(numeroIngresado)){
 			numeroIngresado = prompt ("Error! Ingrese un número");
 			numeroIngresado = parseInt (numeroIngresado);
 		}
+		
 		acumulador = acumulador + numeroIngresado;
 		contador = contador + 1;
 	}

@@ -10,12 +10,15 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 let numeroSecreto; 
 let contadorIntentos;
 
+contadorIntentos = 0;
+
 function comenzar()
 {
   numeroSecreto = Math.round (Math.random ()* 100 + 1);
-
-  //para probar si funciona
-  alert (numeroSecreto);
+  contadorIntentos = 0;
+  
+  alert ("El juego ha comenzado, ingrese un numero y presione el boton de verificar para ver si es correcto");
+  
 }
 
 function verificar()
@@ -25,32 +28,32 @@ function verificar()
   numeroIngresado = document.getElementById ("txtIdNumero").value;
   numeroIngresado = parseInt (numeroIngresado);
 
-  contadorIntentos = 0;
 
   while (isNaN (numeroIngresado)){
     alert ("Error, ingrese un número");
+    return;
   }
-
-  while (numeroIngresado != numeroSecreto) {
-    if (numeroIngresado > numeroSecreto) {
-      alert ("Se pasó...");
-      contadorIntentos = contadorIntentos + 1
-      break;
-    }
-    else {
+  while (numeroIngresado <0 || numeroIngresado >100){
+    alert ("Ingrese un número válido");
+    return;
+  }
+  
+  if (numeroIngresado > numeroSecreto) {
+    alert ("Se pasó...");
+    contadorIntentos = contadorIntentos + 1
+  }
+  else {
+    if (numeroIngresado < numeroSecreto){
       alert ("Falta...");
       contadorIntentos = contadorIntentos + 1
-      break;
     }
-    
+    else {
+      contadorIntentos = contadorIntentos + 1
+      alert ("Usted es ganador!!! Y en solo " + contadorIntentos + " intentos");
+    }  
   }
 
-  if (numeroIngresado == numeroSecreto){
-    contadorIntentos = contadorIntentos + 1
-    alert ("Usted es ganador!!! Y en solo " + contadorIntentos + " intentos");
+
+  document.getElementById("txtIdIntentos").value = contadorIntentos;
+
   }
-
-
-	
-	
-}
