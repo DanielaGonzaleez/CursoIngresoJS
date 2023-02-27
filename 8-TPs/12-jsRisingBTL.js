@@ -1,4 +1,5 @@
-/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
+/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e 
+ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
 12.   Los datos requeridos son los siguientes:
 A.	Edad, entre 18 y 90 años inclusive.
 B.	Sexo, “M” para masculino y “F” para femenino
@@ -9,10 +10,9 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 	//definicion de variables
- 	let edadIngresada;
- 	let sexoIngresado;
- 	let estadoCivilIngresado;
+	let edadIngresada;
+	let sexoIngresado;
+	let estadoCivilIngresado;
 	let sueldoBrutoIngresado;
 	let legajoIngresado;
 	let nacionalidadIngresada;
@@ -38,8 +38,8 @@ function ComenzarIngreso ()
 	document.getElementById ("txtIdSexo").value = sexoIngresado;
 
 	do {
-	estadoCivilIngresado = prompt ("Ingrese el numero correspondiente a su estado civil estado civil: 1- Soltero/a; 2- Casado/a; 3- Divorciado/a; 4- Viudo/a");
-	estadoCivilIngresado = parseInt (estadoCivilIngresado);
+		estadoCivilIngresado = prompt ("Ingrese el numero correspondiente a su estado civil estado civil: 1- Soltero/a; 2- Casado/a; 3- Divorciado/a; 4- Viudo/a");
+		estadoCivilIngresado = parseInt (estadoCivilIngresado);
 	} while (estadoCivilIngresado <1 || estadoCivilIngresado >4 || isNaN (estadoCivilIngresado));
 
 	switch (estadoCivilIngresado){
@@ -77,16 +77,17 @@ function ComenzarIngreso ()
 
 	switch(nacionalidadIngresada){
 		case "A":
-			nacionalidadIngresada = "Argentino/a";
-			break;
+		nacionalidadIngresada = "Argentino/a";
+		break;
 		case "E":
-			nacionalidadIngresada = "Extranjero/a";
-			break;
+		nacionalidadIngresada = "Extranjero/a";
+		break;
 		case "N":
-			nacionalidadIngresada = "Nacionalizado/a";
-			break;
+		nacionalidadIngresada = "Nacionalizado/a";
+		break;
 	}
 
 	document.getElementById("txtIdNacionalidad").value = nacionalidadIngresada;
+
 
 }
