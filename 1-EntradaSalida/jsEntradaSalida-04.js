@@ -4,11 +4,34 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {	
-	let nombre;
+}
+
+//txtIdNombre 
+/*
+let nombre;
 
 	nombre = prompt ("Ingrese su nombre");
 
 	document.getElementById("txtIdNombre").value = nombre;
 }
 
-//txtIdNombre 
+
+let cantidadFilas;
+	let contador = 0;
+	let espacio;
+	let asterisco;
+
+	espacio= ""
+	asterisco = "*"
+
+	do {
+		cantidadFilas = prompt ("Ingrese la cantidad de filas");
+		cantidadFilas = parseInt (cantidadFilas);
+	} while (isNaN (cantidadFilas)|| cantidadFilas <0)
+
+	while (contador < cantidadFilas){
+		
+		console.log (espacio += asterisco);
+		contador ++;
+	}
+*/
